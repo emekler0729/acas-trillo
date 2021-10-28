@@ -1,0 +1,14 @@
+.header {
+    height: 7rem;
+    background-color: white;
+    border-bottom: var(--color-gray-light-2);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.4rem;
+
+    &__brand {
+        height: 3.25rem;
+        margin-left: 3rem;
+    }
+}
