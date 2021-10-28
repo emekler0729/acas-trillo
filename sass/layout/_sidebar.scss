@@ -52,9 +52,6 @@
             z-index: 10;
         }
 
-        &__link:hover {
-        }
-
         &__icon {
             width: 1.75rem;
             height: 1.75rem;
@@ -65,7 +62,6 @@
 
     .legal {
         font-size: 1.2rem;
-        // text-align: center;
         padding: 2.5rem;
         color: var(--color-gray-light-4);
 

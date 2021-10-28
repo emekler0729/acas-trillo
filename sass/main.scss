@@ -1,8 +1,12 @@
 @import "abstract/variables";
 
+@import "base/animations";
 @import "base/reset";
 @import "base/typography";
 
+@import "components/buttons";
+@import "components/gallery";
+@import "components/overview";
 @import "components/search";
 @import "components/user-nav";
 
