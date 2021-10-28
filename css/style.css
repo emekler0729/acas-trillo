@@ -10,6 +10,8 @@
   --color-gray-dark-2: #777;
   --color-gray-dark-3: #999;
   --shadow-dark: 0 2rem 6rem rgba(0, 0, 0, 0.3);
+  --shadow-light: 0 2rem 5rem rgba(0, 0, 0, 0.06);
+  --border-light: 1px solid var(--color-gray-light-2);
 }
 
 @keyframes pulsate {
@@ -46,6 +48,10 @@ body {
   color: var(--color-gray-dark-2);
 }
 
+.paragraph:not(:last-of-type) {
+  margin-bottom: 2rem;
+}
+
 .btn-inline {
   border: none;
   color: var(--color-primary);
@@ -72,10 +78,36 @@ body {
   display: block;
 }
 
+.list {
+  list-style: none;
+  margin: 3rem 0;
+  padding: 3rem;
+  border-top: var(--border-light);
+  border-bottom: var(--border-light);
+  display: flex;
+  flex-wrap: wrap;
+}
+.list__item {
+  flex: 0 0 50%;
+  margin-bottom: 0.7rem;
+}
+.list__item::before {
+  content: "";
+  display: inline-block;
+  height: 1rem;
+  width: 1rem;
+  margin-right: 0.7rem;
+  background-color: var(--color-primary);
+  -webkit-mask-image: url(../img/chevron-thin-right.svg);
+  mask-image: url(../img/chevron-thin-right.svg);
+  -webkit-mask-size: cover;
+  mask-size: cover;
+}
+
 .overview {
   display: flex;
   align-items: center;
-  border-bottom: 1px solid var(--color-gray-light-2);
+  border-bottom: var(--border-light);
 }
 .overview__heading {
   font-size: 2.25rem;
@@ -122,6 +154,22 @@ body {
 .overview__rating-count {
   font-size: 0.8rem;
   text-transform: uppercase;
+}
+
+.recommendations {
+  font-size: 1.3rem;
+  color: var(--color-gray-dark-3);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.recommendations__img {
+  height: 4rem;
+  width: 4rem;
+  border-radius: 50%;
+  margin-right: -1.5rem;
+  border: 4px solid white;
+  box-sizing: content-box;
 }
 
 .search {
@@ -217,7 +265,7 @@ body {
 .header {
   height: 7rem;
   background-color: white;
-  border-bottom: 1px solid var(--color-gray-light-2);
+  border-bottom: var(--border-light);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -230,7 +278,25 @@ body {
 
 .information {
   background-color: white;
-  height: 70rem;
+}
+.information .detail {
+  display: flex;
+  padding: 4.5rem;
+  background-color: var(--color-gray-light-1);
+  border-bottom: var(--border-light);
+}
+.information .description {
+  background: chartreuse;
+  flex: 0 0 60%;
+  margin-right: 4.5rem;
+  background-color: white;
+  box-shadow: var(--shadow-light);
+  padding: 3rem;
+  font-size: 1.4rem;
+}
+.information .user-reviews {
+  background: chocolate;
+  flex: 1;
 }
 
 .sidebar {
@@ -307,7 +373,6 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
 }
 
 .container {
@@ -315,7 +380,6 @@ body {
   background: var(--color-gray-light-2);
   box-shadow: var(--shadow-dark);
   flex-grow: 1;
-  min-height: 50rem;
 }
 
 .content {

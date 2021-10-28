@@ -1,5 +1,25 @@
 .information {
     background-color: white;
 
-    height: 70rem; //temp
+    .detail {
+        display: flex;
+        padding: 4.5rem;
+        background-color: var(--color-gray-light-1);
+        border-bottom: var(--border-light);
+    }
+
+    .description {
+        background: chartreuse;
+        flex: 0 0 60%;
+        margin-right: 4.5rem;
+        background-color: white;
+        box-shadow: var(--shadow-light);
+        padding: 3rem;
+        font-size: 1.4rem;
+    }
+
+    .user-reviews {
+        background: chocolate;
+        flex: 1;
+    }
 }
