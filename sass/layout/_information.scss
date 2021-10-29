@@ -6,20 +6,21 @@
         padding: 4.5rem;
         background-color: var(--color-gray-light-1);
         border-bottom: var(--border-light);
+        font-size: 1.4rem;
     }
 
     .description {
-        background: chartreuse;
         flex: 0 0 60%;
         margin-right: 4.5rem;
         background-color: white;
         box-shadow: var(--shadow-light);
         padding: 3rem;
-        font-size: 1.4rem;
     }
 
     .user-reviews {
-        background: chocolate;
         flex: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 }
