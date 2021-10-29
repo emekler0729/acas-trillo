@@ -53,14 +53,16 @@ body {
   margin-bottom: 2rem;
 }
 
-.btn-inline {
+.btn {
   border: none;
-  color: var(--color-primary);
   font-size: inherit;
+  cursor: pointer;
+}
+.btn-inline {
+  color: var(--color-primary);
   border-bottom: 1px solid currentColor;
   display: inline-block;
   background-color: transparent;
-  cursor: pointer;
   transition: all 0.2s;
 }
 .btn-inline:hover {
@@ -69,13 +71,48 @@ body {
 .btn-inline:hover span {
   margin-left: 8px;
 }
-.btn-inline:focus {
-  outline: none;
-  animation: pulsate 1s infinite;
-}
 .btn-inline span {
   margin-left: 3px;
   transition: margin-left 0.2s;
+}
+.btn-cta {
+  position: relative;
+  font-size: 1.5rem;
+  font-weight: 300;
+  text-transform: uppercase;
+  border-radius: 100px;
+  background-image: linear-gradient(to right, var(--color-primary-light), var(--color-primary-dark));
+  color: white;
+  overflow: hidden;
+}
+.btn-cta > * {
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+}
+.btn-cta__visible {
+  padding: 2rem 7.5rem;
+  transition: transform 0.2s;
+}
+.btn-cta__invisible {
+  position: absolute;
+  left: 0;
+  top: -100%;
+  padding: 2rem 0;
+  transition: all 0.2s;
+}
+.btn-cta:hover {
+  background-image: linear-gradient(to left, var(--color-primary-light), var(--color-primary-dark));
+}
+.btn-cta:hover .btn-cta__visible {
+  transform: translateY(100%);
+}
+.btn-cta:hover .btn-cta__invisible {
+  top: 0;
+}
+.btn:focus {
+  outline: none;
+  animation: pulsate 1s infinite;
 }
 
 .gallery {
@@ -360,6 +397,16 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+.information .cta {
+  padding: 3.5rem 0;
+  text-align: center;
+}
+.information .cta__book-now {
+  font-size: 2rem;
+  font-weight: 300;
+  margin-bottom: 2.5rem;
+  text-transform: uppercase;
 }
 
 .sidebar {

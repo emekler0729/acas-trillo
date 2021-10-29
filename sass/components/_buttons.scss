@@ -1,12 +1,13 @@
 .btn {
+    border: none;
+    font-size: inherit;
+    cursor: pointer;
+
     &-inline {
-        border: none;
         color: var(--color-primary);
-        font-size: inherit;
         border-bottom: 1px solid currentColor;
         display: inline-block;
         background-color: transparent;
-        cursor: pointer;
         transition: all 0.2s;
 
         &:hover {
@@ -17,14 +18,56 @@
             }
         }
 
-        &:focus {
-            outline: none;
-            animation: pulsate 1s infinite;
-        }
-
         & span {
             margin-left: 3px;
             transition: margin-left 0.2s;
         }
+    }
+
+    &-cta {
+        position: relative;
+        font-size: 1.5rem;
+        font-weight: 300;
+        text-transform: uppercase;
+        border-radius: 100px;
+        background-image: linear-gradient(to right, var(--color-primary-light), var(--color-primary-dark));
+        color: white;
+        overflow: hidden;
+
+        & > * {
+            display: inline-block;
+            height: 100%;
+            width: 100%;
+        }
+
+        &__visible {
+            padding: 2rem 7.5rem;
+            transition: transform 0.2s;
+        }
+
+        &__invisible {
+            position: absolute;
+            left: 0;
+            top: -100%;
+            padding: 2rem 0;
+            transition: all 0.2s;
+        }
+
+        &:hover {
+            background-image: linear-gradient(to left, var(--color-primary-light), var(--color-primary-dark));
+        }
+
+        &:hover &__visible {
+            transform: translateY(100%);
+        }
+
+        &:hover &__invisible {
+            top: 0;
+        }
+    }
+
+    &:focus {
+        outline: none;
+        animation: pulsate 1s infinite;
     }
 }
