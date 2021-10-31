@@ -6,6 +6,10 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
+
+    @media only screen and (max-width: $bp-xl) {
+        align-items: flex-start;
+    }
 }
 
 .container {
@@ -13,10 +17,18 @@ body {
     background: var(--color-gray-light-2);
     box-shadow: var(--shadow-dark);
     flex-grow: 1;
+
+    @media only screen and (max-width: $bp-xl) {
+        max-width: 100%;
+    }
 }
 
 .content {
     display: flex;
+
+    @media only screen and (max-width: $bp-md) {
+        flex-direction: column;
+    }
 
     .sidebar {
         flex: 0 0 18%;

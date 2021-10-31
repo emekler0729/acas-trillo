@@ -7,6 +7,18 @@
         background-color: var(--color-gray-light-1);
         border-bottom: var(--border-light);
         font-size: 1.4rem;
+
+        @media only screen and (max-width: $bp-md) {
+            padding: 3rem;
+        }
+
+        @media only screen and (max-width: $bp-sm) {
+            flex-direction: column;
+        }
+
+        @media only screen and (max-width: $bp-sm) {
+            padding: 3rem 0;
+        }
     }
 
     .description {
@@ -15,6 +27,16 @@
         background-color: white;
         box-shadow: var(--shadow-light);
         padding: 3rem;
+
+        @media only screen and (max-width: $bp-md) {
+            padding: 2rem;
+            margin-right: 3rem;
+        }
+
+        @media only screen and (max-width: $bp-sm) {
+            margin-right: 0;
+            margin-bottom: 3rem;
+        }
     }
 
     .user-reviews {
@@ -27,6 +49,10 @@
     .cta {
         padding: 3.5rem 0;
         text-align: center;
+
+        @media only screen and (max-width: $bp-md) {
+            padding: 2.5rem 0;
+        }
 
         &__book-now {
             font-size: 2rem;

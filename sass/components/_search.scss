@@ -4,6 +4,11 @@
     align-items: center;
     justify-content: center;
 
+    @media only screen and (max-width: $bp-xs) {
+        order: 1;
+        flex: 0 0 100%;
+    }
+
     &__input {
         font-family: inherit;
         font-size: inherit;
@@ -16,10 +21,18 @@
         transition: width 0.2s, background-color 0.2s;
         margin-right: -3.5rem;
 
+        @media only screen and (max-width: $bp-xs) {
+            width: 85%;
+        }
+
         &:focus {
             outline: none;
             width: 100%;
             background-color: var(--color-gray-light-3);
+
+            @media only screen and (max-width: $bp-xs) {
+                width: 95%;
+            }
         }
 
         &::placeholder {
