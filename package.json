@@ -5,7 +5,10 @@
     "main": "index.js",
     "scripts": {
         "watch-sass": "sass --no-source-map --watch sass/main.scss css/style.css",
-        "start": "npm run watch-sass"
+        "start": "npm run watch-sass",
+        "make-sass": "sass --no-source-map sass/main.scss css/style.css",
+        "prefix-css": "postcss css/style.css --use autoprefixer -o css/style.css --no-map",
+        "build": "npm run make-sass & npm run prefix-css"
     },
     "repository": {
         "type": "git",
@@ -18,6 +21,8 @@
     },
     "homepage": "https://github.com/emekler0729/acas-trillo#readme",
     "devDependencies": {
+        "autoprefixer": "^10.4.0",
+        "postcss-cli": "^9.0.1",
         "sass": "^1.43.4"
     }
 }
