@@ -19,8 +19,8 @@
 }
 
 // Breakpoints
-$bp-xl: calc(1200px / 16px * 1rem);
-$bp-lg: calc(1100px / 16px * 1rem);
-$bp-md: calc(900px / 16px * 1rem);
-$bp-sm: calc(720px / 16px * 1rem);
-$bp-xs: calc(500px / 16px * 1rem);
+$bp-lg: calc(1100px / 16px * 1em);
+$bp-xl: calc(1200px / 16px * 1em);
+$bp-md: calc(900px / 16px * 1em);
+$bp-sm: calc(720px / 16px * 1em);
+$bp-xs: calc(500px / 16px * 1em);
